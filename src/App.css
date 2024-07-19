@@ -1,0 +1,29 @@
+#root {
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.max-width {
+  max-width: 1280px;
+}
+
+.app-blue {
+  background-color: #243048;
+}
+
+.accent-1 {
+  /* color: #f2c7b4; */
+  /* color: #BAC79F; */
+  /* color: #9C9482; */
+  /* color: #FDFFE2; */
+
+  color: #EEEDEB;
+  /* color: #E6B9A6; */
+  /* color: #939185; */
+  /* color: #2F3645; */
+}
+
+.accent-2 {
+  color: #eeaf60;
+}

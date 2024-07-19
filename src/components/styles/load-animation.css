@@ -1,0 +1,169 @@
+
+:root {
+  --anim-duration: 2s;
+  --finish-color: rgb(30, 30, 30);
+}
+
+.intro-bg {
+  animation: bg-anim var(--anim-duration) ease;
+}
+
+@keyframes bg-anim {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: white; 
+  }
+  70% {
+    background-color: black; 
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.svg-div-transform {
+  width: 0rem;
+  height: 0rem;
+  animation: svg-div-anim var(--anim-duration) ease-in;
+}
+
+@keyframes svg-div-anim {
+  /* drop circle from above like rain */
+  0% {
+    width: 10rem;
+    height: 10rem;
+    transform: translate(50%, -80rem);
+    fill: antiquewhite;
+  }
+  35% {
+    width: 2rem;
+    height: 2rem;
+    transform: translate(50%, -50%);
+    fill: var(--finish-color);
+  }
+  /* pause for time for expansion animation */
+  36% {
+    width: 0rem;
+    height: 0rem;
+    transform: translate(50%, -50%);
+    fill: steelblue;
+  }
+  37% {
+    width: 0rem;
+    height: 0rem;
+    transform: translate(50%, -50%);
+    fill: steelblue;
+  }
+  /* expand to cover entire screeen */
+  38% {
+    width: 0rem;
+    height: 0rem;
+    transform: translate(50%, -50%);
+    fill: steelblue;
+  }
+  70% {
+    width: 300vw;
+    height: 300vw;
+    transform: translate(50%, -50%);
+    fill: var(--finish-color);
+  }
+  80% {
+    width: 300vw;
+    height: 300vw;
+    transform: translate(50%, -50%);
+    fill: var(--finish-color);
+  }
+  /* remove svg to allow bg to fade to transparent */
+  81% {
+    width: 300vw;
+    height: 300vw;
+    transform: translate(50%, -50%);
+    fill: var(--finish-color);
+  }
+    /* Fade to transparent to reveal loaded site */
+  100% {
+    width: 300vw;
+    height: 300vw;
+    transform: translate(50%, -50%);
+    fill: transparent;
+  }
+}
+
+.left-splash {
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, 300%);
+  height: 0.1rem;
+  width: 5rem;
+  background-color: black;
+  opacity: 0;
+  animation: left-splash-anim var(--anim-duration) ease-out;
+}
+
+.right-splash {
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, 300%);
+  height: 0.1rem;
+  width: 5rem;
+  background-color: crimson;
+  opacity: 0;
+  animation: right-splash-anim var(--anim-duration) ease-out;
+}
+
+
+@keyframes left-splash-anim {
+  0% {
+    transform: translate(0%, 300%);
+    opacity: 0;
+  }
+  35% {
+    transform: translate(0%, 300%);
+    opacity: 0;
+  }
+  36% {
+    transform: translate(0%, 300%);
+    opacity: 1;
+  }
+  66% {
+    transform: translate(-200%, 300%);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-200%, 300%);
+    opacity: 0;
+}
+  100% {
+      transform: translate(-200%, 300%);
+      opacity: 0;
+  }
+}
+
+@keyframes right-splash-anim {
+  0% {
+    transform: translate(100%, 300%);
+    opacity: 0;
+  }
+  35% {
+    transform: translate(100%, 300%);
+    opacity: 0;
+  }
+  36% {
+    transform: translate(100%, 300%);
+    opacity: 1;
+  }
+  66% {
+    transform: translate(300%, 300%);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(300%, 300%);
+    opacity: 0;
+}
+  100% {
+      transform: translate(300%, 300%);
+      opacity: 0;
+  }
+}
