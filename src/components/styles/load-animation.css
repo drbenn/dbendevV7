@@ -1,11 +1,5 @@
-
-:root {
-  --anim-duration: 2s;
-  --finish-color: rgb(30, 30, 30);
-}
-
 .intro-bg {
-  animation: bg-anim var(--anim-duration) ease;
+  animation: bg-anim var(--load-anim-duration) ease;
 }
 
 @keyframes bg-anim {
@@ -16,7 +10,7 @@
     background-color: white; 
   }
   70% {
-    background-color: black; 
+    background-color: var(--load-finish-color); 
   }
   100% {
     background-color: transparent;
@@ -26,7 +20,7 @@
 .svg-div-transform {
   width: 0rem;
   height: 0rem;
-  animation: svg-div-anim var(--anim-duration) ease-in;
+  animation: svg-div-anim var(--load-anim-duration) ease-in;
 }
 
 @keyframes svg-div-anim {
@@ -35,52 +29,52 @@
     width: 10rem;
     height: 10rem;
     transform: translate(50%, -80rem);
-    fill: antiquewhite;
+    fill: var(--load-drop-color-start);
   }
   35% {
     width: 2rem;
     height: 2rem;
     transform: translate(50%, -50%);
-    fill: var(--finish-color);
+    fill: var(--load-finish-color);
   }
   /* pause for time for expansion animation */
   36% {
     width: 0rem;
     height: 0rem;
     transform: translate(50%, -50%);
-    fill: steelblue;
+    fill: var(--load-drop-color-expand);
   }
   37% {
     width: 0rem;
     height: 0rem;
     transform: translate(50%, -50%);
-    fill: steelblue;
+    fill: var(--load-drop-color-expand);
   }
   /* expand to cover entire screeen */
   38% {
     width: 0rem;
     height: 0rem;
     transform: translate(50%, -50%);
-    fill: steelblue;
+    fill: var(--load-drop-color-expand);
   }
   70% {
     width: 300vw;
     height: 300vw;
     transform: translate(50%, -50%);
-    fill: var(--finish-color);
+    fill: var(--load-finish-color);
   }
   80% {
     width: 300vw;
     height: 300vw;
     transform: translate(50%, -50%);
-    fill: var(--finish-color);
+    fill: var(--load-finish-color);
   }
   /* remove svg to allow bg to fade to transparent */
   81% {
     width: 300vw;
     height: 300vw;
     transform: translate(50%, -50%);
-    fill: var(--finish-color);
+    fill: var(--load-finish-color);
   }
     /* Fade to transparent to reveal loaded site */
   100% {
@@ -95,22 +89,22 @@
   top: 50%;
   right: 50%;
   transform: translate(0%, 300%);
-  height: 0.1rem;
-  width: 5rem;
-  background-color: black;
+  height: 0.5rem;
+  width: 7rem;
+  background-color: var(--load-drop-intersectors);
   opacity: 0;
-  animation: left-splash-anim var(--anim-duration) ease-out;
+  animation: left-splash-anim var(--load-anim-duration) ease-out;
 }
 
 .right-splash {
   top: 50%;
   right: 50%;
   transform: translate(100%, 300%);
-  height: 0.1rem;
-  width: 5rem;
-  background-color: crimson;
+  height: 0.5rem;
+  width: 7rem;
+  background-color: var(--load-drop-intersectors);
   opacity: 0;
-  animation: right-splash-anim var(--anim-duration) ease-out;
+  animation: right-splash-anim var(--load-anim-duration) ease-out;
 }
 
 

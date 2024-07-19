@@ -26,6 +26,8 @@ import {
   IconChevronDown,
 } from '@tabler/icons-react';
 // import classes from './HeaderMegaMenu.module.css';
+import './styles/navbar.css';
+import { useState, useEffect } from 'react';
 
 const mockdata = [
   {
@@ -84,6 +86,24 @@ const NavBar = () => {
     </UnstyledButton>
   ));
 
+
+  const [scrollY, setScrollY] = useState(0);
+  const bgClassName = scrollY <= 15 ? 'bg-top' : 'bg-body';
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    // Add event listener when component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     // <div id="navbar" className="section">
     //   <h1>NavBar Section</h1>
@@ -91,12 +111,15 @@ const NavBar = () => {
     //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati expedita aperiam quo aliquid error facere maiores suscipit reprehenderit voluptates quibusdam consequatur veritatis, ea quia animi iure aut dolore. Dolorum laboriosam cumque ut sequi blanditiis nobis cupiditate soluta adipisci corrupti consequuntur unde perspiciatis autem, reiciendis, tempore tenetur nostrum suscipit totam alias?
     //   </p>
     // </div>
+    <>
+    <div className={bgClassName}></div>
     <Box pb={120}>
-    <header className='app-blue text-white'>
-      <Group justify="space-between" h="100%">
+    <header className='fixed z-50 top-0 bg-transparent w-full border-b-1 border-zinc-500'>
+      <Group justify="space-between" h="4rem">
 
         <Group>
           {/* Icon Placeholder */}
+          Icon
         </Group>
 
         <Group h="100%" gap={40} visibleFrom="sm">
@@ -117,6 +140,7 @@ const NavBar = () => {
         </Group>
       </Group>
     </header>
+
 
     <Drawer
       opened={drawerOpened}
@@ -160,6 +184,8 @@ const NavBar = () => {
       </ScrollArea>
     </Drawer>
   </Box>
+    
+    </>
   )
 }
 
