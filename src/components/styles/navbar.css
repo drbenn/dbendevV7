@@ -6,8 +6,8 @@
   right:0;
   height: 4rem;
   width: 99vw;
-  background-color: blue;
-  animation: bg-top-anim 0.3s ease-in;
+  background-color: var(--navigation-top-bg-color);
+  animation: bg-top-anim var(--navbar-right-to-left-animation-speed) ease-in;
 }
 
 .bg-body {
@@ -17,33 +17,91 @@
   right:0;
   height: 4.025rem;
   width: 99vw;
-  background-color: rgba(255, 255, 255, 0.889);
+  background-color: var(--navigation-body-bg-color);
   /* filter: blur(1px); */
   backdrop-filter: blur(8px);
   box-shadow: 0 0 2px 0 ;
-  animation: bg-body-anim 0.3s ease-in;
+  animation: bg-body-anim var(--navbar-right-to-left-animation-speed) ease-in;
 }
 
 @keyframes bg-top-anim {
   0% {
-    background-color: rgba(255, 255, 255, 0.643);
+    background-color: var(--navigation-body-bg-color);
     width: 0rem;
   }
   100% {
-    background-color: blue;
+    background-color: var(--navigation-top-bg-color);
     width: 100vw;
   }
 }
 
 @keyframes bg-body-anim {
   0% {
-    background-color: blue;
+    background-color: var(--navigation-top-bg-color);
     width: 0rem;
   }
   100% {
-    background-color: rgba(255, 255, 255, 0.643);
+    background-color: var(--navigation-body-bg-color);
     backdrop-filter: blur(8px);
     box-shadow: 0 0 2px 0 ;
     width: 100vw;
+  }
+}
+
+.expand-text-wrapper {
+  width: fit-content;
+}
+
+.first-name {
+  width: 1rem;
+  height:2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.last-name {
+  width: 0.8rem;
+  height:2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.expand-text-wrapper:hover .first-name {
+  animation: expand-first-name 7.5s ease-in;
+}
+
+@keyframes expand-first-name {
+  0% {
+    width: 1rem;
+    visibility: hidden;
+  }
+  5% {
+    width: 2.6rem;
+    visibility: visible;
+  }
+  100% {
+    width: 2.6rem;
+    visibility: visible;
+  }
+}
+
+.expand-text-wrapper:hover .last-name {
+  animation: expand-last-name 8s ease-in 0.4s;
+}
+
+@keyframes expand-last-name {
+  0% {
+    width: 0.8rem;
+    visibility: hidden;
+  }
+  5% {
+    width: 5rem;
+    visibility: visible;
+  }
+  100% {
+    width: 5rem;
+    visibility: visible;
   }
 }

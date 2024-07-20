@@ -28,6 +28,7 @@ import {
 // import classes from './HeaderMegaMenu.module.css';
 import './styles/navbar.css';
 import { useState, useEffect } from 'react';
+import logoImage from '../assets/icon/rocky.png';
 
 const mockdata = [
   {
@@ -113,13 +114,25 @@ const NavBar = () => {
     // </div>
     <>
     <div className={bgClassName}></div>
-    <Box pb={120}>
+    <Box pb={60}>
     <header className='fixed z-50 top-0 bg-transparent w-full border-b-1 border-zinc-500'>
       <Group justify="space-between" h="4rem">
 
         <Group>
-          {/* Icon Placeholder */}
-          Icon
+          <div className='absolute ml-4 flex flex-row flex-nowrap justify-start align-center expand-text-wrapper select-none'>
+            <div className="relative w-12 h-12 overflow-hidden">
+              <img src={logoImage} alt="Description" className="absolute top-1/2 left-1/2 min-w-full min-h-full transform -translate-x-1/2 -translate-y-1/2" />
+            </div>
+            <div className='mt-2 ml-2 h-8 h-12 flex flex-row flex-nowrap justify-center align-center font-light text-2xl cursor-default'>
+              <div className='first-name h-8'>
+                Dan
+              </div>
+              <div className='last-name'>
+                Bennett
+              </div>
+            </div>
+
+          </div>
         </Group>
 
         <Group h="100%" gap={40} visibleFrom="sm">

@@ -10,6 +10,11 @@
   --load-drop-intersectors: #00FA9F; 
   /* --load-drop-intersectors: #F71444;  */
   --load-finish-color: rgb(30, 30, 30);
+
+  /* Navigation */
+  --navigation-top-bg-color: rgba(160, 255, 211, 0.194);
+  --navigation-body-bg-color: rgba(255, 255, 255, 0.643);
+  --navbar-right-to-left-animation-speed: 0.3s;
 }
 
 .max-width {
@@ -20,13 +25,22 @@
   background-color: #243048;
 }
 
+
+.text-light {
+  color: rgb(245, 245, 245);
+}
+
+.text-dark {
+  color: #2f2f2f;
+}
+
 .accent-1 {
   /* color: #f2c7b4; */
   /* color: #BAC79F; */
   /* color: #9C9482; */
   /* color: #FDFFE2; */
 
-  color: #EEEDEB;
+  /* color: #EEEDEB; */
   /* color: #E6B9A6; */
   /* color: #939185; */
   /* color: #2F3645; */
