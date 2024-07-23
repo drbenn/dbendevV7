@@ -3,7 +3,8 @@ import './components/styles/load-animation.css';
 import NavBar from "./components/NavBar";
 // import Hero from "./components/Hero";
 // import HeroRays from "./components/HeroRays";
-import HeroImage from "./components/HeroImage";
+// import HeroImage from "./components/HeroImage";
+import HeroDots from "./components/HeroDots";
 import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
@@ -42,7 +43,8 @@ function App() {
         <NavBar />
         {/* <Hero /> */}
         {/* <HeroRays /> */}
-        <HeroImage />
+        {/* <HeroImage /> */}
+        <HeroDots />
         <Experience />
         <Portfolio />
         <Contact />

@@ -53,7 +53,7 @@
 }
 
 .first-name {
-  width: 1rem;
+  width: 0.8rem;
   height:2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -61,7 +61,7 @@
 }
 
 .last-name {
-  width: 0.8rem;
+  width: 0.7rem;
   height:2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -78,12 +78,14 @@
     visibility: hidden;
   }
   5% {
-    width: 2.6rem;
+    width: 2rem;
     visibility: visible;
+    color: grey;
   }
   100% {
-    width: 2.6rem;
+    width: 2rem;
     visibility: visible;
+    color: grey;
   }
 }
 
@@ -93,15 +95,17 @@
 
 @keyframes expand-last-name {
   0% {
-    width: 0.8rem;
+    width: 0.7rem;
     visibility: hidden;
   }
-  5% {
-    width: 5rem;
+  7% {
+    width: 3.8rem;
     visibility: visible;
+    color: grey;
   }
   100% {
-    width: 5rem;
+    width: 3.8rem;
     visibility: visible;
+    color: grey;
   }
 }
