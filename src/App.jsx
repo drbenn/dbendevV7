@@ -44,6 +44,7 @@ function App() {
         {/* <Hero /> */}
         {/* <HeroRays /> */}
         {/* <HeroImage /> */}
+        Test
         <HeroDots />
         <Experience />
         <Portfolio />
