@@ -3,10 +3,10 @@ import './styles/hero-ray.css';
 const HeroRays = () => {
   return (
     <div id="hero-rays" className="relative section h-[45rem] flex flex-col justify-center align-center">
-      <div className="text-7xl text-dark font-bold">
+      <div className="text-7xl font-bold">
         Dan Bennett
       </div>
-      <div className="text-3xl text-dark font-bold">
+      <div className="text-3xl font-bold">
         Full Stack Developer
       </div>
       <div className='floating-object relative '>

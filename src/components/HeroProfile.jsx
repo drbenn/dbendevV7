@@ -5,10 +5,10 @@ const HeroProfile = () => {
   return (
   <div id="hero-profile" className="relative flex flex-row justify-center align-center pr-2">
     <section className="relative flex flex-col justify-start align-start">
-      <div className="mt-16 text-7xl text-dark font-semibold">
+      <div className="mt-16 text-7xl font-semibold">
         Dan Bennett
       </div>
-      <div className="mt-6 text-2xl text-dark font-medium">
+      <div className="mt-6 text-2xl font-medium">
         Full Stack Developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam saepe provident nesciunt modi quod.
       </div>
     </section>

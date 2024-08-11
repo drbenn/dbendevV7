@@ -15,7 +15,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 // import LoadAnimation from './components/LoadAnimation';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 
 function App() {
   const [isLoadAnimationComplete, setIsLoadAnimationComplete] = useState(true);
@@ -46,10 +46,11 @@ function App() {
         {/* <HeroRays /> */}
         {/* <HeroImage /> */}
         <HeroProfile />
-        Test
         {/* <HeroDots /> */}
-        <Experience />
-        <Portfolio />
+        {/* <Experience /> */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Portfolio />
+        </Suspense>
         <Contact />
       </div>
     </MantineProvider>
