@@ -140,14 +140,17 @@ const NavBar = () => {
 
         <Group h="100%" gap={40} visibleFrom="sm">
           <a href="#" className=''>
-            Home
+            Projects
           </a>
 
           <a href="#" className=''>
-            Learn
+            Experience
           </a>
           <a href="#" className=''>
-            Academy
+            About
+          </a>
+          <a href="#" className=''>
+            Contact
           </a>
         </Group>
 

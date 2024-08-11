@@ -16,8 +16,8 @@ const HeroProfile = () => {
       <picture className="relative z-0 w-[290px] h-[290px]">
         <img src={imageUrl} alt="Description of the image" width="290" height="290" />
       </picture>
-      <div className="absolute z-10 w-[290px] h-[290px] img-overlay-gradient-t-b"></div>
-      <div className="absolute z-20 w-[290px] h-[290px] img-overlay-gradient-l-r"></div>
+      <div className="absolute z-0 w-[290px] h-[290px] img-overlay-gradient-t-b"></div>
+      <div className="absolute z-0 w-[290px] h-[290px] img-overlay-gradient-l-r"></div>
     </section>
   </div>
   )
