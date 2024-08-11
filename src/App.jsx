@@ -6,7 +6,8 @@ import NavBar from "./components/NavBar";
 // import HeroImage from "./components/HeroImage";
 // import HeroDots from "./components/HeroDots";
 import HeroProfile from "./components/HeroProfile";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
+import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 
@@ -52,6 +53,9 @@ function App() {
         {/* <Experience /> */}
         <Suspense fallback={<div>Loading...</div>}>
           <Portfolio />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
         </Suspense>
         <Contact />
       </div>

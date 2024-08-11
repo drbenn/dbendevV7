@@ -126,7 +126,7 @@ const NavBar = () => {
               className="absolute top-1/2 left-1/2 min-w-full min-h-full 
               transform -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <div className='mt-3 ml-2 h-8 flex flex-row flex-nowrap justify-center align-center font-light text-lg cursor-default'>
+            <div className='mt-3 ml-2 h-8 w-[6rem] flex flex-row flex-nowrap justify-start align-center font-light text-lg cursor-default'>
               <div className='first-name h-8'>
                 Dan
               </div>
@@ -141,10 +141,6 @@ const NavBar = () => {
         <Group h="100%" gap={40} visibleFrom="sm">
           <a href="#" className=''>
             Projects
-          </a>
-
-          <a href="#" className=''>
-            Experience
           </a>
           <a href="#" className=''>
             About
