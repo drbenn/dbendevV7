@@ -15,7 +15,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 // import LoadAnimation from './components/LoadAnimation';
 
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 
 function App() {
   const [isLoadAnimationComplete, setIsLoadAnimationComplete] = useState(true);
@@ -26,21 +26,23 @@ function App() {
 
   return (
     <MantineProvider>
-      <div className='w-[60vw] mx-auto flex flex-col justify-center align-center'>
-        <div className='animate-fade-in'></div>
+      <main>
         { isLoadAnimationComplete ? (
-          <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
-          <div className='svg-div-transform absolute top-2/4 right-2/4'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-              <g transform="translate(200, 100)">
-                <circle cx="0" cy="100" r="200"></circle>
-              </g>
-            </svg>
+            <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
+            <div className='svg-div-transform absolute top-2/4 right-2/4'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+                <g transform="translate(200, 100)">
+                  <circle cx="0" cy="100" r="200"></circle>
+                </g>
+              </svg>
+            </div>
+            <div className='left-splash absolute'></div>
+            <div className='right-splash absolute'></div>
           </div>
-          <div className='left-splash absolute'></div>
-          <div className='right-splash absolute'></div>
-        </div>
-        ) : '' }
+          ) : '' }
+        <div className='relative w-[60vw] app-max-width mx-auto flex flex-col justify-center align-center'>
+        {/* <div className='animate-fade-in'></div> */}
+
         <NavBar />
         {/* <Hero /> */}
         {/* <HeroRays /> */}
@@ -53,6 +55,9 @@ function App() {
         </Suspense>
         <Contact />
       </div>
+
+      </main>
+
     </MantineProvider>
   )
 }
