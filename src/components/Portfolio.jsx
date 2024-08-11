@@ -1,8 +1,15 @@
 import { useEffect, useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import { Modal, Button } from '@mantine/core';
 
 const Portfolio = () => {
 
   const [data, setData] = useState(null);
+  const [opened, { open, close }] = useDisclosure(false);
+
+  const content = Array(100)
+  .fill(0)
+  .map((_, index) => <p key={index}>Modal with scroll</p>);
 
   useEffect(() => {
     fetch('https://utfs.io/f/5cc546a8-ad7d-4441-8e24-ef7f0a8ea45e-giljeu.json')
@@ -63,6 +70,19 @@ const Portfolio = () => {
         
         }
       </div>
+
+      <Modal
+        opened={opened}
+        onClose={close}
+        title="All Projects"
+        fullScreen
+        radius={0}
+        transitionProps={{ transition: 'fade', duration: 200 }}
+        >
+        {content}
+      </Modal>
+
+      <Button onClick={open}>Open modal</Button>
     </div>
   )
 }
