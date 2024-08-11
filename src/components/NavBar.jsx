@@ -115,11 +115,11 @@ const NavBar = () => {
     <>
     <div className={bgClassName}></div>
     <Box pb={60}>
-    <header className='fixed z-50 top-0 bg-transparent w-full border-b-1 border-zinc-500'>
+    <header className='w-full fixed z-50 top-0 bg-transparent border-b-1 border-zinc-500'>
       <Group justify="space-between" h="4rem">
 
         <Group>
-          <div className='absolute ml-5 flex flex-row flex-nowrap 
+          <div className='absolute pl-5 flex flex-row flex-nowrap 
           justify-start align-center expand-text-wrapper select-none'>
             <div className="relative w-12 h-12 overflow-hidden">
               <img src={logoImage} alt="Description" 

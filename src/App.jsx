@@ -4,7 +4,8 @@ import NavBar from "./components/NavBar";
 // import Hero from "./components/Hero";
 // import HeroRays from "./components/HeroRays";
 // import HeroImage from "./components/HeroImage";
-import HeroDots from "./components/HeroDots";
+// import HeroDots from "./components/HeroDots";
+import HeroProfile from "./components/HeroProfile";
 import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <MantineProvider>
-      <div>
+      <div className='w-[60vw] mx-auto flex flex-col justify-center align-center'>
         <div className='animate-fade-in'></div>
         { isLoadAnimationComplete ? (
           <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
@@ -44,8 +45,9 @@ function App() {
         {/* <Hero /> */}
         {/* <HeroRays /> */}
         {/* <HeroImage /> */}
+        <HeroProfile />
         Test
-        <HeroDots />
+        {/* <HeroDots /> */}
         <Experience />
         <Portfolio />
         <Contact />

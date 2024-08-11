@@ -61,7 +61,7 @@
 }
 
 .last-name {
-  width: 0.7rem;
+  width: 0.6rem;
   height:2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -77,13 +77,13 @@
     width: 1rem;
     visibility: hidden;
   }
-  5% {
-    width: 2rem;
+  4% {
+    width: 1.9rem;
     visibility: visible;
     color: grey;
   }
   100% {
-    width: 2rem;
+    width: 1.9rem;
     visibility: visible;
     color: grey;
   }
@@ -98,13 +98,13 @@
     width: 0.7rem;
     visibility: hidden;
   }
-  7% {
-    width: 3.8rem;
+  6% {
+    width: 3.6rem;
     visibility: visible;
     color: grey;
   }
   100% {
-    width: 3.8rem;
+    width: 3.6rem;
     visibility: visible;
     color: grey;
   }

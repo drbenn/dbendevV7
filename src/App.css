@@ -1,7 +1,7 @@
 #root {
-  margin: 0 auto;
+
   /* padding: 2rem; */
-  text-align: center;
+  /* text-align: center; */
 
   /* Load Animations */
   --load-anim-duration: 2s;
@@ -17,9 +17,21 @@
   --navbar-right-to-left-animation-speed: 0.3s;
 }
 
-.max-width {
-  max-width: 1280px;
+body {
+  /* margin: auto;
+  max-width: 60vw;
+  height: 100%;
+  padding: 0;
+  margin: auto; */
+  /* TODO: set as cpu mode var for light or dark */
+  background-color: white; 
+  /* TODO: set as cpu mode var for light or dark */
+  color: black;
 }
+
+/* .max-width {
+  max-width: 1280px;
+} */
 
 .app-blue {
   background-color: #243048;
@@ -38,7 +50,8 @@
 }
 
 .text-dark {
-  color: #2f2f2f;
+  /* color: #2f2f2f; */
+  color: #414141;
 }
 
 .accent-1 {
