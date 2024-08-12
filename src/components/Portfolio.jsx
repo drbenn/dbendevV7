@@ -30,6 +30,7 @@ const Portfolio = () => {
       </div> */}
       <div className="flex flex-col flex-nowrap justify-center gap-6">
         {data ? data.map((item, index) => (
+          item.isFeatured ? (
           <div 
             key={index} 
             className="">
@@ -46,7 +47,7 @@ const Portfolio = () => {
 
 
             
-          </div>
+          </div>) : ''
           // <div key={index} className="max-w-sm w-[60vw] p-4 bg-white shadow-lg rounded-lg">
           //   <div className="flex justify-center mb-4 bg-blue-400">
           //     <img

@@ -41,7 +41,7 @@ function App() {
             <div className='right-splash absolute'></div>
           </div>
           ) : '' }
-        <div className='relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-center align-center'>
+        <div className='relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center'>
         {/* <div className='animate-fade-in'></div> */}
 
         <NavBar />

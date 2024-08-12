@@ -16,7 +16,7 @@
   top: 0;
   right:0;
   height: 4.025rem;
-  width: 99vw;
+  width: 100%;
   background-color: var(--navigation-body-bg-color);
   /* filter: blur(1px); */
   backdrop-filter: blur(8px);
@@ -82,10 +82,14 @@
     visibility: visible;
     color: grey;
   }
-  100% {
+  95% {
     width: 1.9rem;
     visibility: visible;
     color: grey;
+  }
+  100% {
+    width: 1rem;
+    visibility: hidden;
   }
 }
 
@@ -103,9 +107,13 @@
     visibility: visible;
     color: grey;
   }
-  100% {
+  95% {
     width: 3.6rem;
     visibility: visible;
     color: grey;
+  }
+  100% {
+    width: 0.7rem;
+    visibility: hidden;
   }
 }

@@ -114,13 +114,13 @@ const NavBar = () => {
     // </div>
     <>
     <div className={bgClassName}></div>
-    <Box pb={60}>
-    <header className='w-full fixed z-40 top-0 bg-transparent border-b-1 border-zinc-500'>
+    <Box pb={100}>
+    <header className='w-full fixed z-40 top-0 bg-transparent border-b-1 border-zinc-500 expand-text-wrapper'>
       <Group justify="space-between" h="4rem">
 
         <Group>
           <div className='flex flex-row flex-nowrap 
-          justify-start align-center expand-text-wrapper select-none'>
+          justify-start align-center select-none'>
             <div className="relative w-12 h-12 overflow-hidden">
               <img src={logoImage} alt="Description" 
               className="absolute top-1/2 left-1/2 min-w-full min-h-full 
@@ -138,7 +138,7 @@ const NavBar = () => {
           </div>
         </Group>
 
-        <Group h="100%" gap={40} visibleFrom="sm">
+        <Group h="100%" gap={25} visibleFrom="sm">
           <a href="#" className=''>
             Projects
           </a>
