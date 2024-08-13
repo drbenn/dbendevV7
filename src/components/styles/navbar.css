@@ -5,8 +5,8 @@
   top: 0;
   right:0;
   height: 4rem;
-  width: 99vw;
-  background-color: var(--navigation-top-bg-color);
+  width: 99.95vw;
+  background-color: var(--light-mode-bg);
   animation: bg-top-anim var(--navbar-right-to-left-animation-speed) ease-in;
 }
 
@@ -77,12 +77,12 @@
     width: 1rem;
     visibility: hidden;
   }
-  4% {
+  2% {
     width: 1.9rem;
     visibility: visible;
     color: grey;
   }
-  95% {
+  98% {
     width: 1.9rem;
     visibility: visible;
     color: grey;
@@ -102,12 +102,12 @@
     width: 0.7rem;
     visibility: hidden;
   }
-  6% {
+  2.5% {
     width: 3.6rem;
     visibility: visible;
     color: grey;
   }
-  95% {
+  98.5% {
     width: 3.6rem;
     visibility: visible;
     color: grey;

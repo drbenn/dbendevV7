@@ -27,7 +27,7 @@ function App() {
 
   return (
     <MantineProvider>
-      <main>
+      <main className='text-zinc-700'>
         { isLoadAnimationComplete ? (
             <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
             <div className='svg-div-transform absolute top-2/4 right-2/4'>
@@ -41,22 +41,25 @@ function App() {
             <div className='right-splash absolute'></div>
           </div>
           ) : '' }
+        <div id='top'></div>
+        <NavBar />
         <div className='relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center'>
         {/* <div className='animate-fade-in'></div> */}
-
-        <NavBar />
         {/* <Hero /> */}
         {/* <HeroRays /> */}
         {/* <HeroImage /> */}
         <HeroProfile />
         {/* <HeroDots /> */}
         {/* <Experience /> */}
+        <div id='portfolio'></div>
         <Suspense fallback={<div>Loading...</div>}>
           <Portfolio />
         </Suspense>
+        <div id='about'></div>
         <Suspense fallback={<div>Loading...</div>}>
           <About />
         </Suspense>
+        <div id='contact'></div>
         <Contact />
       </div>
 

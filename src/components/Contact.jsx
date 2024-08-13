@@ -22,7 +22,7 @@ const Contact = () => {
         </div>
         <div>
           <a href="https://leetcode.com/dbenn10/" target="_blank" rel="noopener noreferrer" 
-            className="text-blue-500 hover:underline">
+            className="">
             LeetCode
           </a>
         </div>

@@ -14,59 +14,35 @@
   /* Navigation */
   --navigation-top-bg-color: rgb(255, 255, 255);
   --navigation-body-bg-color: rgba(255, 255, 255, 0.643);
-  --navbar-right-to-left-animation-speed: 0.3s;
+  --navbar-right-to-left-animation-speed: 0.25s;
+
+  /* Light Mode */
+  --light-mode-bg: rgb(255, 255, 255);
+  --light-mode-primary-text: rgb(152, 88, 88);
+  --light-mode-alt-text: rgb(164, 89, 89);
+  --light-mode-accent: #5c7cfa;
 }
 
 body {
-  /* margin: auto;
-  max-width: 60vw;
-  height: 100%;
-  padding: 0;
-  margin: auto; */
   /* TODO: set as cpu mode var for light or dark */
-  background-color: white; 
+  background-color: var(--light-mode-bg); 
   /* TODO: set as cpu mode var for light or dark */
-  color: black;
+  color: var(--light-mode-primary-text);
 }
 
 .app-max-width {
   max-width: 1280px;
 }
 
-.app-blue {
-  background-color: #243048;
+a {
+  font-weight: 500;
+  color: var(--light-mode-alt-text);
+  text-decoration: inherit;
+  transition: 50ms ease-in;
 }
 
-.primary-text {
-  color: #3166E0;
+a:hover {
+  color: #364fc7;
+  text-decoration: underline;
+  transition: 50ms ease-in;
 }
-
-.accent-text {
-  color: #E03177;
-}
-
-.text-light {
-  color: #E683AA;
-}
-
-.text-dark {
-  /* color: #2f2f2f; */
-  color: #414141;
-}
-
-.accent-1 {
-  /* color: #f2c7b4; */
-  /* color: #BAC79F; */
-  /* color: #9C9482; */
-  /* color: #FDFFE2; */
-
-  /* color: #EEEDEB; */
-  /* color: #E6B9A6; */
-  /* color: #939185; */
-  /* color: #2F3645; */
-}
-
-.accent-2 {
-  color: #eeaf60;
-}
-
