@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div id="about" className="min-h-[80vh] flex flex-col flex-nowrap justify-center align-center">
+    <div id="about" className="flex flex-col flex-nowrap justify-center align-center">
       <div className="text-2xl font-bold">
         Job Title
       </div>
@@ -25,7 +25,7 @@ const About = () => {
       <div className="text-2xl font-bold">
         Biography
       </div>
-      <p className="text-lg font-medium pt-5 pb-16">
+      <p className="text-lg font-medium pt-5">
         I am Daniel Bennett. I work as a Software Engineer for Neuma Consulting where I primarily do front-end development on Angular applications. A self-taught developer with a history and passion for learning and growing. In my free time I enjoy going to Judo, BJJ, Muay Thai, or eating pho.
       </p>
 

@@ -25,6 +25,9 @@ function App() {
     setTimeout(() => setIsLoadAnimationComplete(false), 2500)
   }, [])
 
+  const responsiveHeightSpacing = 'w-full py-8 md:py-16 lg:py-28 bg-pink-100';
+  const responsiveHeightSpacing2 = 'w-full py-8 md:py-16 lg:py-28 bg-green-100';
+
   return (
     <MantineProvider>
       <main className='text-zinc-700'>
@@ -53,11 +56,15 @@ function App() {
         {/* <Experience /> */}
         <div id='portfolio'></div>
         <Suspense fallback={<div>Loading...</div>}>
+        <div className={responsiveHeightSpacing2}>
           <Portfolio />
+        </div>
         </Suspense>
         <div id='about'></div>
         <Suspense fallback={<div>Loading...</div>}>
-          <About />
+          <div className={responsiveHeightSpacing}>
+            <About />
+          </div>
         </Suspense>
         <div id='contact'></div>
         <Contact />

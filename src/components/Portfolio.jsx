@@ -20,7 +20,7 @@ const Portfolio = () => {
 
   return (
     <div className="">
-      <div className='text-3xl font-semibold my-4'>Featured Projects and Content</div>
+      <div className='text-3xl font-semibold mb-4'>Featured Projects</div>
       {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati expedita aperiam quo aliquid error facere maiores suscipit reprehenderit voluptates quibusdam consequatur veritatis, ea quia animi iure aut dolore. Dolorum laboriosam cumque ut sequi blanditiis nobis cupiditate soluta adipisci corrupti consequuntur unde perspiciatis autem, reiciendis, tempore tenetur nostrum suscipit totam alias?
       </p> */}
@@ -35,8 +35,7 @@ const Portfolio = () => {
             key={index} 
             className="">
             <div className="text-xl font-bold mb-2">
-              <a href={item.demoLink} target="_blank" rel="noopener noreferrer" 
-                className="text-blue-500 hover:underline">
+              <a href={item.demoLink} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </a>
             </div>
@@ -44,34 +43,20 @@ const Portfolio = () => {
             <div className="mt-1">
               <span className="font-semibold">Tech:</span> {item.tech.join(', ')}
             </div>
-
+            <div className="mt-1">
+            <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  <a href={item.gitLink}>Git Repo</a>
+            </div>
+            {index !== data.length -1 ? <hr></hr> : ''}
 
             
           </div>) : ''
-          // <div key={index} className="max-w-sm w-[60vw] p-4 bg-white shadow-lg rounded-lg">
-          //   <div className="flex justify-center mb-4 bg-blue-400">
-          //     <img
-          //       src={item.img}
-          //       alt={item.title}
-          //       className="w-[100px] h-[100px] object-cover rounded-full"
-          //     />
-          //   </div>
-          //   <h2 className="text-xl font-bold mb-2">
-          //     <a href={item.demoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-          //       {item.title}
-          //     </a>
-          //   </h2>
-          //   <p className="mb-4">{item.oneLine}</p>
-          //   <div className="text-gray-600">
-          //     <span className="font-semibold">Technologies:</span> {item.tech.join(', ')}
-          //   </div>
-          // </div>
         )) : <div>Loading.....</div>
         
         
         }
       </div>
 
+      <Button className='mt-16' onClick={open}>View Project Archive</Button>
       <Modal
         opened={opened}
         onClose={close}
@@ -83,7 +68,7 @@ const Portfolio = () => {
         {content}
       </Modal>
 
-      <Button onClick={open}>Open modal</Button>
+      
     </div>
   )
 }
