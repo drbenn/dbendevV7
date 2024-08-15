@@ -4,7 +4,7 @@ import './styles/hero-profile.css';
 
 const HeroProfile = () => {
   return (
-    <main className='relative flex flex-col justify-start align-start min-h-[60vh] select-none mt-8 md:mt-16 lg:mt-28'>
+    <main className='relative flex flex-col justify-start align-start select-none'>
       <div className="relative flex flex-row justify-center align-center">
         <section className="relative flex flex-col justify-start align-start">
           <div className="text-6xl xl:text-7xl font-semibold">

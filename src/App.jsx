@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import HeroProfile from "./components/HeroProfile";
 // import Experience from "./components/Experience";
 import About from "./components/About";
-import Portfolio from "./components/Portfolio";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 import '@mantine/core/styles.css';
@@ -25,8 +25,8 @@ function App() {
     setTimeout(() => setIsLoadAnimationComplete(false), 2500)
   }, [])
 
-  const responsiveHeightSpacing = 'w-full py-8 md:py-16 lg:py-28 bg-pink-100';
-  const responsiveHeightSpacing2 = 'w-full py-8 md:py-16 lg:py-28 bg-green-100';
+  const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-40';
+  const responsiveHeightSpacingOther = 'w-full py-8 md:py-16 lg:py-28';
 
   return (
     <MantineProvider>
@@ -51,18 +51,19 @@ function App() {
         {/* <Hero /> */}
         {/* <HeroRays /> */}
         {/* <HeroImage /> */}
-        <HeroProfile />
+        <div className={responsiveHeightSpacingHero}>
+          <HeroProfile />
+        </div>
         {/* <HeroDots /> */}
         {/* <Experience /> */}
         <div id='portfolio'></div>
         <Suspense fallback={<div>Loading...</div>}>
-        <div className={responsiveHeightSpacing2}>
-          <Portfolio />
+        <div className={responsiveHeightSpacingOther}>
+          <Projects />
         </div>
         </Suspense>
-        <div id='about'></div>
         <Suspense fallback={<div>Loading...</div>}>
-          <div className={responsiveHeightSpacing}>
+          <div className={responsiveHeightSpacingOther} id='about'>
             <About />
           </div>
         </Suspense>

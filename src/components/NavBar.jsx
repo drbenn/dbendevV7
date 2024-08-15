@@ -118,7 +118,7 @@ const NavBar = () => {
             justify-start align-center cursor-pointer'>
               <a href="#top">
                 <div className="relative w-12 h-12 overflow-hidden">
-                  <img src={logoImage} alt="Description" 
+                  <img src={logoImage} alt="danbennet.dev logo" 
                   className="absolute top-1/2 left-1/2 min-w-full min-h-full 
                   transform -translate-x-1/2 -translate-y-1/2" />
                 </div>

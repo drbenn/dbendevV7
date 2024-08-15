@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button } from '@mantine/core';
 
-const Portfolio = () => {
+const Projects = () => {
 
   const [data, setData] = useState(null);
   const [opened, { open, close }] = useDisclosure(false);
@@ -14,7 +14,9 @@ const Portfolio = () => {
   useEffect(() => {
     fetch('https://utfs.io/f/5cc546a8-ad7d-4441-8e24-ef7f0a8ea45e-giljeu.json')
       .then(response => response.json())
-      .then(jsonData => setData(jsonData))
+      .then(jsonData => setData(jsonData.sort((a,b) => b.id - a.id)))
+      .then(console.log(data)
+      )
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
@@ -43,7 +45,7 @@ const Portfolio = () => {
             <div className="mt-1">
               <span className="font-semibold">Tech:</span> {item.tech.join(', ')}
             </div>
-            <div className="mt-1">
+            <div className="mt-1 mb-6">
             <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  <a href={item.gitLink}>Git Repo</a>
             </div>
             {index !== data.length -1 ? <hr></hr> : ''}
@@ -56,16 +58,39 @@ const Portfolio = () => {
         }
       </div>
 
-      <Button className='mt-16' onClick={open}>View Project Archive</Button>
+      <Button className='mt-4' onClick={open}>View Project Archive</Button>
       <Modal
         opened={opened}
         onClose={close}
-        title="All Projects"
         fullScreen
-        radius={0}
-        transitionProps={{ transition: 'fade', duration: 200 }}
+        transitionProps={{ transition: 'fade', duration: 100 }}
         >
-        {content}
+        <div  className='p-5 text-3xl'>All Projects</div>
+        {data ? data.map((item, index) => (
+          <div key={index} className='w-full flex flex-col p-5 flex-gap-1'>
+            <div className="text-xl font-bold mb-2">
+              <a href={item.demoLink} target="_blank" rel="noopener noreferrer">
+                {item.title}
+              </a>
+            </div>
+            <div className="mt-1">
+              <span className="font-semibold">Tech:&nbsp;</span>{item && item.tech ? item.tech.join() : ''}
+            </div>
+            <div className="mt-1">
+              {item.oneLine}
+            </div>
+            <div className='mt-1 hidden sm:flex'>
+              {item.details}
+            </div>
+            <div className="mt-3 mb-6">
+              <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  <a href={item.gitLink}>Git Repo</a>
+            </div>
+            {index !== data.length -1 ? <hr></hr> : ''}
+          </div>
+
+        ))
+        : ''
+      }
       </Modal>
 
       
@@ -73,4 +98,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio;
+export default Projects;
