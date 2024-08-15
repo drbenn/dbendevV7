@@ -4,17 +4,19 @@
   /* text-align: center; */
 
   /* Load Animations */
-  --load-anim-duration: 2s;
-  --load-drop-color-start: #4000FA;
-  --load-drop-color-expand: #4000FA;
-  --load-drop-intersectors: #00FA9F; 
+  --load-anim-duration: 2.2s;
+  --load-drop-color-start: #364fc7;
+  --load-drop-color-expand: #364fc7;
+  /* --load-drop-intersectors: #00FA9F; */
+  --load-drop-intersectors: #fff;
   /* --load-drop-intersectors: #F71444;  */
   --load-finish-color: rgb(30, 30, 30);
 
   /* Navigation */
   --navigation-top-bg-color: rgb(255, 255, 255);
-  --navigation-body-bg-color: rgba(255, 255, 255, 0.643);
-  --navbar-right-to-left-animation-speed: 0.25s;
+  /* --navigation-body-bg-color: rgba(255, 255, 255, 0.643); */
+  --navigation-body-bg-color: #364ec70f;
+  --navbar-right-to-left-animation-speed: 0.5s;
 
   /* Light Mode */
   --light-mode-bg: rgb(255, 255, 255);

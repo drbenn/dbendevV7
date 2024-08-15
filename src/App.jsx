@@ -22,7 +22,7 @@ function App() {
   const [isLoadAnimationComplete, setIsLoadAnimationComplete] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoadAnimationComplete(false), 2500)
+    setTimeout(() => setIsLoadAnimationComplete(false), 4000)
   }, [])
 
   const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-40';
