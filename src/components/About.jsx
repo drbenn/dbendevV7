@@ -8,18 +8,21 @@ const About = () => {
         Daniel Bennett, Software Engineer
         <br />
         Neuma Consulting, VA/DC
+        <br />
+        March 2022 - Current
       </div>
 
       <div className="text-2xl font-bold">
         Education
       </div>
       <div className="text-lg font-medium pt-5 pb-16">
-        Not related to Computer Science, but I did it.
+        Not related to Computer Science, but I did it, and it has brought me here today.
         <br></br>
         Undergraduate In Economics from University of Maryland. MBA from University of Baltimore.
         <br></br>
-        Then I decided to go back to University of Baltimore for an Accounting Certificate to work in Public Accounting and become a CPA. 
-        Which I did, and now I do not.
+        Then  University of Baltimor2 more years at University of Baltimore for an Accounting Certificate to work in Public Accounting and become a CPA.
+        <br></br>
+        Which is my past. And in my new career I learn from doing, books, documentation and mentors.
       </div>
 
       <div className="text-2xl font-bold">

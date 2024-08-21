@@ -25,6 +25,7 @@ function App() {
     setTimeout(() => setIsLoadAnimationComplete(false), 4000)
   }, [])
 
+  const responsiveWrapper = 'relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center';
   const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-40';
   const responsiveHeightSpacingOther = 'w-full py-8 md:py-16 lg:py-28';
 
@@ -46,30 +47,28 @@ function App() {
           ) : '' }
         <div id='top'></div>
         <NavBar />
-        <div className='relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center'>
-        {/* <div className='animate-fade-in'></div> */}
-        {/* <Hero /> */}
-        {/* <HeroRays /> */}
-        {/* <HeroImage /> */}
-        <div className={responsiveHeightSpacingHero}>
-          <HeroProfile />
-        </div>
-        {/* <HeroDots /> */}
-        {/* <Experience /> */}
-        <div id='portfolio'></div>
-        <Suspense fallback={<div>Loading...</div>}>
-        <div className={responsiveHeightSpacingOther}>
-          <Projects />
-        </div>
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <div className={responsiveHeightSpacingOther} id='about'>
-            <About />
+        <div className={responsiveWrapper}>
+          <div className={responsiveHeightSpacingHero}>
+            <HeroProfile />
           </div>
-        </Suspense>
-        <div id='contact'></div>
-        <Contact />
-      </div>
+          <div id='portfolio'></div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className={responsiveHeightSpacingOther}>
+              <Projects />
+            </div>
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className={responsiveHeightSpacingOther} id='about'>
+              <About />
+            </div>
+          </Suspense>
+        </div>
+        <div className='w-full border-t border-slate-400'></div>
+        <div className={responsiveWrapper}>
+          <div id='contact'></div>
+          <Contact />
+        </div>
+
 
       </main>
 

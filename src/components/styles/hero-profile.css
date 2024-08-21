@@ -1,7 +1,7 @@
 .img-overlay-gradient-t-b {
-    background: linear-gradient(180deg, transparent 75%, white);
+    background: linear-gradient(180deg, transparent 70%, white 95%);
 }
 
 .img-overlay-gradient-l-r {
-    background: linear-gradient(90deg, white, transparent, transparent, white);
+    background: linear-gradient(90deg, white 12%, transparent 40%, transparent 70%, white 94%);
 }
