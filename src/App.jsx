@@ -1,12 +1,7 @@
 import './App.css'
 import './components/styles/load-animation.css';
 import NavBar from "./components/NavBar";
-// import Hero from "./components/Hero";
-// import HeroRays from "./components/HeroRays";
-// import HeroImage from "./components/HeroImage";
-// import HeroDots from "./components/HeroDots";
 import HeroProfile from "./components/HeroProfile";
-// import Experience from "./components/Experience";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";

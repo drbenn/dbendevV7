@@ -19,9 +19,9 @@ const About = () => {
         Unrelated to Computer Science, but I did it, and it has brought me to where I am today.
         Undergraduate In Economics from University of Maryland. MBA from University of Baltimore.
         <br /><br />
-        Then 2 more years at University of Baltimore for an Accounting Certificate to work in Public Accounting and become a CPA.
+        Then two more years at University of Baltimore for an Accounting Certificate to work in Public Accounting and become a CPA.
         <br /><br />
-        Which is my past. And in my new career I learn from doing, books, documentation and mentors.
+        Which is my past. And it demonstrates my devotion to learning and capacity for self-study. In my new career I learn from doing, books, documentation and mentors.
       </div>
 
       <div className="text-2xl font-semibold">
