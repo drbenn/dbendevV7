@@ -36,10 +36,10 @@ const Projects = () => {
                 {item.title}
               </a>
             </div>
-            <p className="select-none">{item.oneLine}</p>
-            <div className="mt-1">
+            <p className="select-none text-lg">{item.oneLine}</p>
+            <div className="mt-1 text-lg">
               <span className="font-semibold select-none">Tech: &nbsp;</span> 
-              <span className=' select-none'>{item.tech.join(', ')}</span>
+              <span className='select-none'>{item.tech.join(', ')}</span>
             </div>
             <div className="mt-1 mb-6">
             <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  <a href={item.gitLink}>Git Repo</a>

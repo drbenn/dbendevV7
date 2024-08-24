@@ -6,7 +6,7 @@ const HeroProfile = () => {
   return (
     <main className='relative flex flex-col justify-start align-start select-none'>
       <div className="relative flex flex-row justify-center align-center">
-        <section className="relative flex flex-col justify-start align-start mt-6">
+        <section className="relative flex flex-col justify-center align-start">
           <div className="text-6xl xl:text-8xl font-semibold">
             Dan Bennett
           </div>
@@ -14,11 +14,11 @@ const HeroProfile = () => {
           </div>
         </section>
         <section className="hidden lg:flex flex-row justify-center align-center ml-4">
-          <picture className="relative z-0 w-[350px] h-[280px]">
+          <picture className="relative z-0 min-w-[350px] w-[29vw] max-w-[400px] h-[280px]">
             <img src={localImg} alt="Dan Bennett Image" width="401" height="321" />
           </picture>
-          <div className="absolute z-0 w-[350px] h-[290px] img-overlay-gradient-t-b"></div>
-          <div className="absolute z-0 w-[350px] h-[290px] img-overlay-gradient-l-r"></div>
+          <div className="absolute z-0 min-w-[350px] w-[29vw] max-w-[400px] min-h-[290px] h-[23.5vw] max-h-[330px] img-overlay-gradient-t-b"></div>
+          <div className="absolute z-0 min-w-[350px] w-[29vw] max-w-[400px] min-h-[290px] h-[23.5vw] max-h-[330px] img-overlay-gradient-l-r"></div>
         </section>
       </div>
     </main>
