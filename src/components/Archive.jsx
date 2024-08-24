@@ -13,14 +13,21 @@ const Archive = ({data}) => {
             <span className="font-semibold select-none">Tech:&nbsp;</span>
             <span className=' select-none'>{item.tech.join(', ')}</span>
           </div>
-          <div className="mt-1 select-none">
+          <div className="mt-3 select-none">
             {item.oneLine}
           </div>
-          <div className='mt-1 hidden sm:flex select-none'>
-            {item.details}
+          <div className='hidden sm:flex flex-col select-none mt-5 mb-1 pl-5'>
+            {item.details ? item.details.map((detail, index) => (
+                <div key={index} className="pb-4">
+                    {detail}
+                </div>
+            )) : <span></span>
+            }
           </div>
-          <div className="mt-3 mb-6 select-none">
-            <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  <a href={item.gitLink}>Git Repo</a>
+          <div className=" mb-6 select-none">
+            <a href={item.demoLink}>Demo</a>  &nbsp;|&nbsp;  
+            {item.gitLink[0] === "N/A" ? <span className="text-amber-600">Git Repo Private</span> : <a href={item.gitLink}>Git Repo</a> }
+            
           </div>
           {index !== data.length -1 ? <hr></hr> : ''}
         </div>

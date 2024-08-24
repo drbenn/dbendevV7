@@ -17,7 +17,7 @@ function App() {
   const [isLoadAnimationComplete, setIsLoadAnimationComplete] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoadAnimationComplete(false), 4000)
+    setTimeout(() => setIsLoadAnimationComplete(false), 1900)
   }, [])
 
   const responsiveWrapper = 'relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center';
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <MantineProvider>
-      <main className='text-zinc-900'>
+      <main className='text-zinc-900 '>
         { isLoadAnimationComplete ? (
             <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
             <div className='svg-div-transform absolute top-2/4 right-2/4'>
@@ -39,31 +39,32 @@ function App() {
             <div className='left-splash absolute'></div>
             <div className='right-splash absolute'></div>
           </div>
-          ) : '' }
-        <div id='top'></div>
-        <NavBar />
-        <div className={responsiveWrapper}>
-          <div className={responsiveHeightSpacingHero}>
-            <HeroProfile />
-          </div>
-          <div id='portfolio'></div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <div className={responsiveHeightSpacingOther}>
-              <Projects />
+          ) : <div>
+            <div id='top'></div>
+            <NavBar />
+            <div className={responsiveWrapper}>
+              <div className={responsiveHeightSpacingHero}>
+                <HeroProfile />
+              </div>
+              <div id='portfolio'></div>
+              <Suspense fallback={<div>Loading...</div>}>
+                <div className={responsiveHeightSpacingOther}>
+                  <Projects />
+                </div>
+              </Suspense>
+              <Suspense fallback={<div>Loading...</div>}>
+                <div className={responsiveHeightSpacingOther} id='about'>
+                  <About />
+                </div>
+              </Suspense>
             </div>
-          </Suspense>
-          <Suspense fallback={<div>Loading...</div>}>
-            <div className={responsiveHeightSpacingOther} id='about'>
-              <About />
+            <div className='w-full border-t border-slate-400 mt-24'></div>
+            <div className={responsiveWrapper}>
+              <div id='contact'></div>
+              <Contact />
             </div>
-          </Suspense>
-        </div>
-        <div className='w-full border-t border-slate-400 mt-24'></div>
-        <div className={responsiveWrapper}>
-          <div id='contact'></div>
-          <Contact />
-        </div>
-
+          </div> 
+        }
 
       </main>
 

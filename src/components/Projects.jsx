@@ -10,7 +10,7 @@ const Projects = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
   useEffect(() => {
-    fetch('https://utfs.io/f/5cc546a8-ad7d-4441-8e24-ef7f0a8ea45e-giljeu.json')
+    fetch('https://utfs.io/f/38a53d27-9b56-4ccd-9192-967c1d76f8f0-giljeu.json')
       .then(response => response.json())
       .then(jsonData => setData(jsonData.sort((a,b) => b.id - a.id)))
       .catch(error => console.error('Error fetching data:', error));
