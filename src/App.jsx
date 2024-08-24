@@ -26,8 +26,8 @@ function App() {
   }, [])
 
   const responsiveWrapper = 'relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center';
-  const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-30';
-  const responsiveHeightSpacingOther = 'w-full py-8 md:py-16 lg:py-18';
+  const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-36';
+  const responsiveHeightSpacingOther = 'w-full py-8 md:py-16 lg:py-32';
 
   return (
     <MantineProvider>
@@ -63,7 +63,7 @@ function App() {
             </div>
           </Suspense>
         </div>
-        <div className='w-full border-t border-slate-400'></div>
+        <div className='w-full border-t border-slate-400 mt-24'></div>
         <div className={responsiveWrapper}>
           <div id='contact'></div>
           <Contact />

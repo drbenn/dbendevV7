@@ -16,7 +16,7 @@
   --navigation-top-bg-color: rgb(255, 255, 255);
   /* --navigation-body-bg-color: rgba(255, 255, 255, 0.643); */
   --navigation-body-bg-color: #bfc3d30f;
-  --navbar-right-to-left-animation-speed: 0.5s;
+  --navbar-right-to-left-animation-speed: 0.35s;
 
   /* Light Mode */
   --light-mode-bg: rgb(255, 255, 255);
