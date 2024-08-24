@@ -38,7 +38,7 @@ const Contact = () => {
           className="w-[3rem]  h-[3rem] mx-auto" />
         </div>
 
-        <div className="text-center mb-[75px] text-xs font-light px-12">
+        <div className="text-center mb-[75px] text-xs font-light px-12 select-none">
           Created by Dan Bennett using the most loved/hated Javascript library React, with TailwindCSS and Mantine UI Components.
         </div>
 
