@@ -14,10 +14,10 @@ import { MantineProvider } from '@mantine/core';
 import { useState, useEffect, Suspense } from 'react';
 
 function App() {
-  const [isLoadAnimationComplete, setIsLoadAnimationComplete] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoadAnimationComplete(false), 1900)
+    setTimeout(() => setIsLoading(false), 1900)
   }, [])
 
   const responsiveWrapper = 'relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center';
@@ -27,7 +27,7 @@ function App() {
   return (
     <MantineProvider>
       <main className='text-zinc-900 '>
-        { isLoadAnimationComplete ? (
+        { isLoading ? (
             <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
             <div className='svg-div-transform absolute top-2/4 right-2/4'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -38,6 +38,10 @@ function App() {
             </div>
             <div className='left-splash absolute'></div>
             <div className='right-splash absolute'></div>
+            {/* Invisible to initiate image load */}
+            <div className='invisible'>
+              <HeroProfile />
+            </div>
           </div>
           ) : <div>
             <div id='top'></div>
