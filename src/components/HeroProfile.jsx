@@ -7,7 +7,7 @@ const HeroProfile = () => {
       <div className="relative flex flex-row justify-center align-center">
         <section className="relative flex flex-col justify-center align-start">
           <div className="text-6xl xl:text-8xl font-semibold">
-            Dan Bennett
+            <h1>Dan Bennett</h1>
           </div>
           <div style={{'fontSize': '1.4rem'}} className="mt-10 font-medium text-zinc-500 leading-7">Dan is a full-stack engineer specializing in Angular, focused on crafting pixel-perfect, performance-driven dynamic front-end experiences for the modern Web.
           </div>

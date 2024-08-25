@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <div className="">
-      <div className='text-2xl font-semibold mb-4 select-none'>Featured Projects</div>
+      <div className='text-2xl font-semibold mb-4 select-none'><h2>Featured Projects</h2></div>
       <div className="flex flex-col flex-nowrap justify-center gap-6 text-zinc-600">
         { featured ? featured.map((item, index) => (
           <div 
