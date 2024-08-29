@@ -20,7 +20,7 @@ function App() {
     setTimeout(() => setIsLoading(false), 1900)
   }, [])
 
-  const responsiveWrapper = 'relative w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto flex flex-col justify-start align-center';
+  const responsiveWrapper = 'relative w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[80vw] app-max-width mx-auto flex flex-col justify-start align-center';
   const responsiveHeightSpacingHero = 'w-full py-8 md:py-16 lg:py-36';
   const responsiveHeightSpacingOther = 'w-full py-8 md:py-16 lg:py-32';
 
