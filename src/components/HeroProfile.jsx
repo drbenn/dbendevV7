@@ -1,4 +1,6 @@
 import './styles/hero-profile.css';
+import heroImage from '../assets/img/p1-cartoon.webp';
+
 
 const HeroProfile = () => {
   
@@ -14,7 +16,7 @@ const HeroProfile = () => {
         </section>
         <section className="hidden md:flex flex-row justify-center align-center ml-4">
           <picture className="relative z-0 min-w-[350px] w-[29vw] max-w-[400px] h-[280px]">
-            <img src='https://utfs.io/f/f8f60d00-9906-4f42-96c1-9b42a5adab8c-paeboe.webp' alt="Dan Bennett Image" width="401" height="321" />
+            <img src={heroImage} alt="Dan Bennett Image" width="401" height="321" />
           </picture>
           <div className="absolute z-0 min-w-[350px] w-[29vw] max-w-[400px] min-h-[290px] h-[23.5vw] max-h-[330px] img-overlay-gradient-t-b"></div>
           <div className="absolute z-0 min-w-[350px] w-[29vw] max-w-[400px] min-h-[290px] h-[23.5vw] max-h-[330px] img-overlay-gradient-l-r"></div>
