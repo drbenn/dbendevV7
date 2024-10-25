@@ -59,6 +59,7 @@ function App() {
               <Suspense fallback={<div>Loading...</div>}>
                 <div className={responsiveHeightSpacingOther} id='about'>
                   <About />
+                  yolo
                 </div>
               </Suspense>
             </div>
