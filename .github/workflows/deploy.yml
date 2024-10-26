@@ -1,4 +1,4 @@
-name: 🚀 Deploy to cPanel on push
+name: 🚀 Deploy to cPanel on push!
 
 on: 
   push:
