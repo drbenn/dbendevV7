@@ -31,6 +31,3 @@ jobs:
         server: ${{ secrets.CPANEL_FTP_SERVER }}
         username: ${{ secrets.CPANEL_FTP_USERNAME }}
         password: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
-        local-dir: ./dist/
-        server-dir: /public_html/
-        port: 21
