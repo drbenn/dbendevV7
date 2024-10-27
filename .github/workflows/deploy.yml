@@ -28,9 +28,9 @@ jobs:
     - name: 📂 Upload to cPanel via SFTP
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.CPANEL_SFTP_SERVER }}
+        host: ${{ secrets.CPANEL_FTP_SERVER }}
         username: ${{ secrets.CPANEL_FTP_USERNAME }}
         password: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
         source: "dist/*"        # The built Vite files
         target: "/public_html/" # The target directory on Namecheap
-        port: 22
+        port: 21098
