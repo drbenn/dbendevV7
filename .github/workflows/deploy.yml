@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Install Dependencies 📦
+    - name: Install! Dependencies 📦
       run: npm install
       
     - name: 🔨 Build React Project
