@@ -26,11 +26,11 @@ jobs:
       run: npm run build
     
     - name: 📂 Upload to cPanel via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: pressidium/lftp-mirror-action@v1
       with:
-        server: ${{ secrets.CPANEL_FTP_SERVER }}
-        username: ${{ secrets.CPANEL_FTP_USERNAME }}
-        password: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
-        local-dir: ./dist/        # The built Vite files
-        server-dir: public_html/ # The target directory on Namecheap
+        host: ${{ secrets.CPANEL_FTP_SERVER }}
+        user: ${{ secrets.CPANEL_FTP_USERNAME }}
+        pass: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
+        localDir: './dist/'        # The built Vite files
+        remoteDir: './public_html' # The target directory on Namecheap
         port: 21098
