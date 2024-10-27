@@ -34,3 +34,4 @@ jobs:
         source: './dist/'        # The built Vite files
         target: './public_html' # The target directory on Namecheap
         port: 21098
+        timeout: 300s 
