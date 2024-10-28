@@ -26,12 +26,11 @@ jobs:
       run: npm run build
     
     - name: 📂 Upload to cPanel via SFTP
-      uses: appleboy/scp-action@v0.1.7
+      uses: pressidium/lftp-mirror-action@v1
       with:
         host: ${{ secrets.CPANEL_FTP_SERVER }}
-        username: ${{ secrets.CPANEL_FTP_USERNAME }}
-        password: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
-        source: './dist/'        # The built Vite files
-        target: './public_html' # The target directory on Namecheap
+        user: ${{ secrets.CPANEL_FTP_USERNAME }}
+        pass: ${{ secrets.CPANEL_FTP_ACCOUNT_PWD }}
+        localDir: './dist/'        # The built Vite files
+        remoteDir: 'public_html' # The target directory on Namecheap
         port: 21098
-        timeout: 300s 
