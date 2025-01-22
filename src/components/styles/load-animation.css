@@ -2,6 +2,22 @@
   animation: bg-anim var(--load-anim-duration) ease;
 }
 
+.simple-intro-bg {
+  animation: simple-bg-anim var(--simple-load-anim-duration) linear;
+}
+
+@keyframes simple-bg-anim {
+  0% {
+    background-color: white;
+  }
+  20% {
+    background-color: rgb(35, 33, 36); 
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 @keyframes bg-anim {
   0% {
     background-color: white;

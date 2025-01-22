@@ -17,7 +17,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1900)
+    setTimeout(() => setIsLoading(false), 700) // originally 1900
   }, [])
 
   const responsiveWrapper = 'relative w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[80vw] app-max-width mx-auto flex flex-col justify-start align-center';
@@ -28,16 +28,31 @@ function App() {
     <MantineProvider>
       <main className='text-zinc-900 '>
         { isLoading ? (
-            <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
-            <div className='svg-div-transform absolute top-2/4 right-2/4'>
+          //   <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden intro-bg">
+          //   <div className='svg-div-transform absolute top-2/4 right-2/4'>
+          //     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+          //       <g transform="translate(200, 100)">
+          //         <circle cx="0" cy="100" r="200"></circle>
+          //       </g>
+          //     </svg>
+          //   </div>
+          //   <div className='left-splash absolute'></div>
+          //   <div className='right-splash absolute'></div>
+          //   {/* Invisible to initiate image load */}
+          //   <div className='invisible'>
+          //     <HeroProfile />
+          //   </div>
+          // </div>
+          <div id="load-animation" className="absolute z-50 h-screen w-screen overflow-hidden simple-intro-bg">
+            {/* <div className='svg-div-transform absolute top-2/4 right-2/4'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
                 <g transform="translate(200, 100)">
                   <circle cx="0" cy="100" r="200"></circle>
                 </g>
               </svg>
-            </div>
-            <div className='left-splash absolute'></div>
-            <div className='right-splash absolute'></div>
+            </div> */}
+            {/* <div className='left-splash absolute'></div>
+            <div className='right-splash absolute'></div> */}
             {/* Invisible to initiate image load */}
             <div className='invisible'>
               <HeroProfile />
@@ -59,7 +74,6 @@ function App() {
               <Suspense fallback={<div>Loading...</div>}>
                 <div className={responsiveHeightSpacingOther} id='about'>
                   <About />
-                  yolo
                 </div>
               </Suspense>
             </div>

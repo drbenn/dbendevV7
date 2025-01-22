@@ -235,7 +235,7 @@
     "gitLink": ["https://github.com/drbenn/grizzly-dividends", "https://github.com/drbenn/grizzly-node-api", "https://github.com/drbenn/dividend-servers"],
     "demoLink": "https://danbennett.dev/grizzly",
     "date": "08/06/2023",
-    "isFeatured": true
+    "isFeatured": false
   },
   {
     "id":18,
@@ -306,6 +306,23 @@
     "demoLink": "https://danbennett.dev",
     "date": "04/05/2024",
     "isFeatured": false
+  },
+  {
+    "id":23,
+    "title":"flobro.pro",
+    "oneLine": "Flow chart gameplan builder for BJJ, Judo, Striking, MMA.",
+    "timeLine": "Nov 2024",
+    "details":["I switchd from BJJ to Judo for a little over a year and wanted to get back into BJJ. I was looking through old instructionals, old books and spreadsheets and thought - 'There has to be a better way to build my gameplan...what has worked in the past, what I can experiment with...' - so I created a live flow chart editor using React-Flow as a library. I also added note taking for users to take notes about class, opn mat, or whatever comes to mind. ", 
+    "Lesson Learned: Dont attempt to create your own svg flowchart library from scrach unless you plan to work on it for a year...well I have a starter, now that my application is released maybe I can get back to it",
+    "Lesson Learned: Just because NameCheap hosting offer Postgres, doesnt mean its a relatively new Postgres. I originally build the server using Postgres and TypeORM. Upon attempting my initial foray into devops and deploying the application about 70% through I found out NameCheap only used something like Postgres 5....where nowadays I beleive Postgres 14 is released....and Postgres 9 is necessary at minimum for TypeORM. That stung. I considered switching to Supabase, but the thought of outsourcing my entire server and database to an external platform made me feel like I would eventually need to move off Supabase and rewrite everything for my own deployment. So I just rewrote the server AGAIN for use in MYSQL with straight up SQL queries and no ORM."
+  ],
+    "img": "",
+    "imgBackgroundPosition": "center center",
+    "tech": ["React", "TypeORM", "NestJS", "Daisy UI", "TailwindCSS", "PostgreSQL", "MySQL"],
+    "gitLink": ["https://github.com/drbenn/flobro-react"],
+    "demoLink": "https://flobro.pro",
+    "date": "11/22/2024",
+    "isFeatured": true
   }
 
 ]

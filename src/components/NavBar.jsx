@@ -37,7 +37,7 @@ const NavBar = () => {
       <div className={bgClassName}></div>
       <Box pb={100}>
       <div className='fixed z-40 top-0 w-full border-b-1 border-zinc-500 expand-text-wrapper'>
-        <div className='w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] app-max-width mx-auto'>
+        <div className='w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[80vw] app-max-width mx-auto'>
           <Group justify="space-between" h="4rem">
 
           <Group>
@@ -50,14 +50,14 @@ const NavBar = () => {
                   transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
               </a>
-              <div className='mt-3 ml-2 h-8 w-[6rem] flex flex-row flex-nowrap justify-start align-center font-light text-lg cursor-default'>
+              {/* <div className='mt-3 ml-2 h-8 w-[6rem] flex flex-row flex-nowrap justify-start align-center font-light text-lg cursor-default'>
                 <div className='first-name h-8'>
                   Dan
                 </div>
                 <div className='last-name'>
                   Bennett
                 </div>
-              </div>
+              </div> */}
 
             </div>
           </Group>

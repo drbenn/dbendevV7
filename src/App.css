@@ -5,6 +5,7 @@
 
   /* Load Animations */
   --load-anim-duration: 2.2s;
+  --simple-load-anim-duration: 0.7s;
   --load-drop-color-start: #364fc7;
   --load-drop-color-expand: #030a2b;
   /* --load-drop-intersectors: #00FA9F; */

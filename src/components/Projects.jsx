@@ -2,6 +2,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button } from '@mantine/core';
 import Archive from './Archive';
+// import jsonData from '../../public/projects.json'
 
 const Projects = () => {
 
@@ -10,7 +11,9 @@ const Projects = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
   useEffect(() => {
-    fetch('https://utfs.io/f/38a53d27-9b56-4ccd-9192-967c1d76f8f0-giljeu.json')
+    // console.log(jsonData);
+    // setData(jsonData.sort((a,b) => b.id - a.id))
+    fetch('./projects.json')
       .then(response => response.json())
       .then(jsonData => setData(jsonData.sort((a,b) => b.id - a.id)))
       .catch(error => console.error('Error fetching data:', error));
